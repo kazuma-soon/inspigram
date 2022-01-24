@@ -1,0 +1,38 @@
+.jumbotron {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.05) ), url("../images/sample.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 0;
+  border-radius: 0;
+}
+
+.top-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  letter-spacing: 2px;
+  white-space: nowrap;
+  font: italic small-caps bold 16px/2 cursive;
+}
+
+.top-authentication {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  &__sign-in-btn {
+    background: #FD3378;
+    border-radius: 30px;
+    padding: 4px;
+    white-space: nowrap; 
+  }
+  &__sign-in-guest {
+    border-radius: 30px;
+    padding: 4px;
+    white-space: nowrap;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px;
+  }
+}
