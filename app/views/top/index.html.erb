@@ -1,5 +1,18 @@
 <div class="jumbotron top-page">
   <div class="container">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand text-white">Inspigram</a>
+      
+      <% if current_user %>
+        <div class="navbar user-name text-right">
+          <%= current_user.name %>さん
+        </div>
+        <div class="navbar__sign-out-btn">
+          <%= link_to "ログアウト", log_out_path, class: "btn my-2 my-sm-0 bg-light text-top-color" %>
+        </div>
+      <% end %>
+
+    </nav>
 
     <div class="top-title">
       <h1 class="text-black text-center">
@@ -8,12 +21,14 @@
     </div>
     
     <div class="top-authentication text-center">
-      <div class="top-authentication__sign-in-btn m-3">
-        <%= link_to "Googleでログイン", "#", class: "btn text-white" %>
-      </div>
-      <div class="top-authentication__sign-in-guest m-3">
-        <%= link_to "ゲストとして開始", "#", class: "btn text-white" %>
-      </div>
+      <% if current_user.nil? %>
+        <div class="top-authentication__sign-in-btn m-3">
+          <%= link_to "Googleでログイン", "/auth/google_oauth2", method: :post, class: "btn text-white" %>
+        </div>
+        <div class="top-authentication__sign-in-guest m-3">
+          <%= link_to "ゲストとして開始", "#", class: "btn text-white" %>
+        </div>
+      <% end %>
     </div>
 
   </div>
