@@ -28,9 +28,15 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Login with Google
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
-gem 'dotenv-rails' #環境変数の設定
+gem 'dotenv-rails' 
+
+# Upload images
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

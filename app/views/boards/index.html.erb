@@ -1,0 +1,26 @@
+<div class="board-index-page">
+  <%= render "shared/navbar" %>
+
+  <div class="swipe mt-3">
+    <div class="swipe--status">
+      <i class="fa fa-times"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+
+    <div class="swipe--cards">
+      <% @boards.each do |board| %>
+        <div class="swipe--card" id="<% board.id %>">
+          <%= image_tag board.board_image.url, class: 'board-img' %>
+        </div>
+      <% end %>
+
+      <div class="no-board">画像は以上です</div>
+    </div>
+
+    <div class="swipe--buttons">
+      <button id="dislike"><i class="fas fa-times fa-2x"></i></button>
+      <button id="like"><i class="fas fa-heart fa-2x"></i></button>
+    </div>
+  </div>
+
+</div>

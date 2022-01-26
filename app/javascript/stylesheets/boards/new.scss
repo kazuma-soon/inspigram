@@ -1,0 +1,12 @@
+.board-new-page{
+  max-width: 480px;
+  margin: auto 0;
+}
+
+@media (min-width: 415px) {
+  .board-new-page {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin: 8px auto;
+  }
+}
