@@ -1,0 +1,30 @@
+.board-index-page {
+  margin: auto 0;
+}
+
+.swipe {
+  height: 92vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: opacity 0.1s ease-in-out;
+
+  &--buttons {
+    flex: 0 0 100px;
+    text-align: center;
+    padding-top: 20px;
+    button {
+      border-radius: 50%;
+      line-height: 60px;
+      width: 60px;
+      border: 0;
+      background: #FFFFFF;
+      display: inline-block;
+      margin: 0 8px;
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}

@@ -1,18 +1,6 @@
 <div class="jumbotron top-page">
   <div class="container">
-    <nav class="navbar navbar-light">
-      <a class="navbar-brand text-white">Inspigram</a>
-      
-      <% if current_user %>
-        <div class="navbar user-name text-right">
-          <%= current_user.name %>さん
-        </div>
-        <div class="navbar__sign-out-btn">
-          <%= link_to "ログアウト", log_out_path, class: "btn my-2 my-sm-0 bg-light text-top-color" %>
-        </div>
-      <% end %>
-
-    </nav>
+    <%= render 'shared/navbar' %> 
 
     <div class="top-title">
       <h1 class="text-black text-center">
