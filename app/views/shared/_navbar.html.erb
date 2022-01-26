@@ -1,10 +1,9 @@
 <nav class="navbar navbar-light">
-  <a class="navbar-brand text-white">Inspigram</a>
+  <%= link_to root_path, class: 'navbar-brand text-white' do %>
+    Inspigram
+  <% end %>
   
   <% if current_user %>
-    <div class="navbar user-name text-right">
-      <%= current_user.name %>さん
-    </div>
     <div class="navbar__sign-out-btn">
       <%= link_to "ログアウト", log_out_path, class: "btn my-2 my-sm-0 bg-light text-top-color" %>
     </div>
