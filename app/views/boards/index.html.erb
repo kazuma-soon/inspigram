@@ -1,16 +1,19 @@
 <div class="board-index-page">
   <%= render "shared/navbar" %>
 
-  <div class="swipe">
+  <div class="swipe mt-3">
     <div class="swipe--status">
       <i class="fa fa-times"></i>
       <i class="fa fa-heart"></i>
     </div>
 
     <div class="swipe--cards">
-        <div class="swipe--card" id="1">
-          <%= image_pack_tag 'media/images/sample_swipe.jpg' %>
+      <% @boards.each do |board| %>
+        <div class="swipe--card" id="<% board.id %>">
+          <%= image_tag board.board_image.url, class: 'board-img' %>
         </div>
+      <% end %>
+
       <div class="no-board">画像は以上です</div>
     </div>
 

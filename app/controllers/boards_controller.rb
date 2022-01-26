@@ -29,5 +29,5 @@ end
 private
 
 def board_params
-  params.require(:board).permit(:image)
+  params.require(:board).permit(:board_image)
 end
