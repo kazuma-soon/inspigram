@@ -2,7 +2,11 @@ class BoardsController < ApplicationController
   skip_before_action :check_logged_in, only: :index
 
   def index
-    @boards = Board.all
+    @boards = Board.all.order(created_at: :asc)
+  end
+
+  def mine
+    @boards = current_user.boards.all.order(created_at: :desc)
   end
 
   def new
