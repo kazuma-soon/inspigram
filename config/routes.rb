@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   get 'log_out', to: 'sessions#destroy', as: 'log_out'
 
   resources :sessions, only: %i[create destroy]
-  resources :boards, only: %i[index new create destroy]
+  resources :boards, only: %i[index new create destroy] do
+    collection do
+      get 'mine'
+    end
+  end
 end
