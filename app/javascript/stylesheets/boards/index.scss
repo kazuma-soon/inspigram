@@ -1,19 +1,8 @@
 .board-index-page {
-  max-width: 480px;
-  margin: auto 0;
-  .profile {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    &-img {
-      width: 340px;
-      height: 520px;
-      object-fit: cover;
-    }
-  }
+  margin: auto 0; 
+  background-size: cover;
+  background-color: #343a40;
+  height: 100%;
 }
 
 .swipe {
@@ -125,13 +114,12 @@
 @media (min-width: 415px) {
   .board-index-page {
     border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
     margin: 8px auto;
   }
 }
 
 @media (min-width: 414px) {
   .swipe {
-    height: 640px;
+    height: 550px;
   }
 }

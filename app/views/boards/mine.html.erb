@@ -1,18 +1,19 @@
 <div class="my-board-index-page">
   <%= render "shared/navbar" %>
 
-  <div class="my--cards">
+  <div class="my-cards mt-3">
     <% @boards.each do |board| %>
-      <div class="my--card card-body bg-dark image-icon-box" id="<% board.id %>">
-        <%= image_tag board.board_image.url, class: 'my-board-img img-fluid rounded' %>
-
+      <div class="my-card my-board-box" id="<% board.id %>">
+        <%= image_tag board.board_image.url, class: 'my-board-img img-fluid rounded d-block mx-auto my-board' %>
+      </div>
+        
+      <div class="trash-box">
         <%= link_to board_path(board), class: 'trash', method: :delete, data: { confirm: "画像を削除しますか？" } do %>
           <i class="far fa-trash-alt fa-2x trash-icon"></i>
         <% end %>
-        
       </div>
     <% end %>
 
-    <div class="no-board">画像は以上です</div>
+    <div class="no-board text-white text-center mt-3">画像は以上です</div>
   </div>
 </div>

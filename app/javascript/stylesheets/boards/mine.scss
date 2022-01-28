@@ -1,13 +1,29 @@
-.image-icon-box {
-  position: relative;
-}
-
-.trash {
-  position: absolute;
-  top: 80%;
-  left: 85%;
+.my-board-index-page {
+  margin: auto 0;
+  height: 100%;
+  background-color: #343a40;
 }
 
 .trash-icon {
   color: #4682b4;
 }
+
+.my-board {
+  width: 340px;
+  height: 340px;
+}
+
+.my-board-box {
+  position: relative;
+}
+  
+.trash-box {
+  position: absolute;
+  top: 53%;
+  left: 60%;
+}
+
+.no-board {
+  letter-spacing: 0.12em;
+}
+
