@@ -1,11 +1,13 @@
-<div class="board-new-page">
+<div class="jumbortron board-new-page mt-auto">
+
   <%= render 'shared/navbar' %>
-  <div class="board-form mt-3">
+
+  <div class="board-form mt-0">
     <%= form_with model: @board, local: true do |f| %>
       
       <div class="form-group">
-        <%= f.label '画像' %>
-        <%= f.file_field :board_image, class: 'form-control-file', id: 'board_image_upload' %>
+        <%= f.label '画像', class: 'text-white' %>
+        <%= f.file_field :board_image, class: 'form-control-file text-white', id: 'board_image_upload' %>
       </div>
       
       <div class="submit-button">
