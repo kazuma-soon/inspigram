@@ -6,7 +6,7 @@
       <div class="my--card card-body bg-dark image-icon-box" id="<% board.id %>">
         <%= image_tag board.board_image.url, class: 'my-board-img img-fluid rounded' %>
 
-        <%= link_to '#', class: 'trash' do %>
+        <%= link_to board_path(board), class: 'trash', method: :delete, data: { confirm: "画像を削除しますか？" } do %>
           <i class="far fa-trash-alt fa-2x trash-icon"></i>
         <% end %>
         

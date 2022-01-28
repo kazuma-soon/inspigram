@@ -34,6 +34,10 @@
         <li class="nav-item">
           <%= link_to 'Logout', log_out_path, class: 'nav-link' %>
         </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Start with Google", "/auth/google_oauth2", method: :post, class: "nav-link" %>
+        </li>
       <% end %>
     </ul>
   </div>
