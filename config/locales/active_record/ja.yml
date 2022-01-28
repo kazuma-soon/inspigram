@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      board: '画像'
+    attributes:
+      board:
+        board_image: '画像'
