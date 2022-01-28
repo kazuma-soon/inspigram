@@ -19,7 +19,7 @@ class BoardsController < ApplicationController
       redirect_to boards_path, success: '画像を投稿しました！'
     else
       render :new
-      flash.now[:danger] = '画像の投稿に失敗しまし！'
+      flash.now[:danger] = '画像の投稿に失敗しました！'
     end
   end
 
@@ -33,5 +33,5 @@ end
 private
 
 def board_params
-  params.require(:board).permit(:board_image)
+  params.permit(:board_image)
 end
