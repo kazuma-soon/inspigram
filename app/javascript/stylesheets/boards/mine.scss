@@ -1,5 +1,7 @@
 .my-board-index-page {
   margin: auto 0;
+  height: 100%;
+  background-color: #343a40;
 }
 
 .trash-icon {
@@ -11,13 +13,17 @@
   height: 340px;
 }
 
-.my-board {
+.my-board-img {
   position: relative;
 }
   
 .trash {
   position: absolute;
-  top: 10%;
-  left: 65%;
-} 
+  top: 52%;
+  left: 50%;
+}
+
+.no-board {
+  letter-spacing: 0.12em;
+}
 
