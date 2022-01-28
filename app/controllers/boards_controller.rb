@@ -33,5 +33,5 @@ end
 private
 
 def board_params
-  params.permit(:board_image)
+  params.required(:board).permit(:board_image)
 end
