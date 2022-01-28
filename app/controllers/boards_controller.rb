@@ -16,23 +16,22 @@ class BoardsController < ApplicationController
   def create
     @board = current_user.boards.build(board_params)
     if @board.save
-      redirect_to boards_path
-      flash[:notice] = '画像を投稿しました'
+      redirect_to boards_path, success: '画像を投稿しました！'
     else
       render :new
-      flash.now[:notice] = '画像の投稿に失敗しました'
+      flash.now[:danger] = '画像の投稿に失敗しました！'
     end
   end
 
   def destroy
     @board = current_user.boards.find(params[:id])
     @board.destroy!
-    redirect_to mine_boards_path
+    redirect_to mine_boards_path, success: '画像を削除しました！'
   end
 end
 
 private
 
 def board_params
-  params.require(:board).permit(:board_image)
+  params.required(:board).permit(:board_image)
 end
