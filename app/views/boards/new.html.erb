@@ -1,20 +1,20 @@
 <div class="board-new-page mt-auto">
-
   <%= render 'shared/navbar' %>
-
   <div class="board-form mt-0 row justify-content-center">
+
     <%= form_with model: @board, local: true do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       
       <div class="form-group">
-        <%= f.label '画像', class: 'text-white mb-3' %>
-        <%= f.file_field :board_image, class: 'form-control-file text-white bg-dark mb-3', id: 'board_image_upload' %>
+        <%= f.label :board_image, class: 'text-white mb-3' %>
+        <%= f.file_field :board_image, class: 'form-control-file text-white bg-dark mb-3' %>
+        <%= f.hidden_field :board_image_cache %>
       </div>
       
       <div class="submit-button">
         <%= f.submit '投稿する', class: 'btn btn-primary' %>
       </div>
-
     <% end %>
+
   </div>
 </div>
