@@ -28,10 +28,10 @@ class BoardsController < ApplicationController
     @board.destroy!
     redirect_to mine_boards_path, success: '画像を削除しました！'
   end
-end
 
-private
+  private
 
-def board_params
-  params.required(:board).permit(:board_image)
+  def board_params
+    params.require(:board).permit(:board_image, :board_image_cache)
+  end
 end
