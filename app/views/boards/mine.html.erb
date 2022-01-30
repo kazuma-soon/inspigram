@@ -5,7 +5,7 @@
 
     <% @boards.each do |board| %>
       <div class="my-card my-board-box" id="<% board.id %>">
-        <%= image_tag board.board_image.url, class: 'my-board-img img-fluid rounded d-block mx-auto my-board' %>
+        <%= image_tag board.board_image.url, class: 'my-board-img img-fluid rounded d-block mx-auto my-board object-fit' %>
 
         <div class="trash-box">
           <%= link_to board_path(board), class: 'trash', method: :delete, data: { confirm: "画像を削除しますか？" } do %>

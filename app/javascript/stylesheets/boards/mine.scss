@@ -27,3 +27,9 @@
   letter-spacing: 0.12em;
 }
 
+.object-fit {
+  background-color: gray;
+  width: 340px; height: 340px;
+  object-fit: contain;
+}
+
