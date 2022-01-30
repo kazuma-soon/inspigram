@@ -7,8 +7,8 @@
       
       <div class="form-group row justify-content-center">
         <%= f.label :board_image, class: 'text-white mb-3' do %>
-          <%= image_pack_tag 'media/images/sample.jpg', size: '340x340' %>
-          <%= f.file_field :board_image, class: 'form-control-file text-white bg-dark mb-3 mt-3 d-none' %>
+          <%= image_pack_tag 'media/images/sample.jpg', class: 'js-default_image', size: '340x340' %>
+          <%= f.file_field :board_image, class: 'form-control-file text-white bg-dark mb-3 mt-3 d-none js-uploader' %>
           <%= f.hidden_field :board_image_cache %>
         <% end %>
       </div>
