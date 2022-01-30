@@ -1,17 +1,19 @@
 <div class="board-new-page mt-auto">
   <%= render 'shared/navbar' %>
-  <div class="board-form mt-0 row justify-content-center">
+  <div class="board-form mt-0">
 
     <%= form_with model: @board, local: true do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       
-      <div class="form-group">
-        <%= f.label :board_image, class: 'text-white mb-3' %>
-        <%= f.file_field :board_image, class: 'form-control-file text-white bg-dark mb-3' %>
-        <%= f.hidden_field :board_image_cache %>
+      <div class="form-group row justify-content-center">
+        <%= f.label :board_image, class: 'text-white mb-3' do %>
+          <%= image_pack_tag 'media/images/sample.jpg', size: '340x340' %>
+          <%= f.file_field :board_image, class: 'form-control-file text-white bg-dark mb-3 mt-3 d-none' %>
+          <%= f.hidden_field :board_image_cache %>
+        <% end %>
       </div>
       
-      <div class="submit-button">
+      <div class="submit-button row justify-content-center">
         <%= f.submit '投稿する', class: 'btn btn-primary' %>
       </div>
     <% end %>
