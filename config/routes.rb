@@ -11,4 +11,5 @@ Rails.application.routes.draw do
       get 'mine'
     end
   end
+  resources :reactions, only: %i[create]
 end

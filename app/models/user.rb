@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :boards, dependent: :destroy
+  has_many :reactions, dependent: :destroy
 
   class << self
     def find_or_create_from_auth_hash(auth_hash)

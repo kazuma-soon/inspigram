@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_26_053045) do
+ActiveRecord::Schema.define(version: 2022_01_31_180414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 2022_01_26_053045) do
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
+  create_table "reactions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "board_id", null: false
+    t.integer "status", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["board_id"], name: "index_reactions_on_board_id"
+    t.index ["user_id"], name: "index_reactions_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -32,4 +42,6 @@ ActiveRecord::Schema.define(version: 2022_01_26_053045) do
   end
 
   add_foreign_key "boards", "users"
+  add_foreign_key "reactions", "boards"
+  add_foreign_key "reactions", "users"
 end
