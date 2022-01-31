@@ -10,7 +10,7 @@
     <div class="swipe--cards">
       <% @boards.each do |board| %>
         <div class="swipe--card" id="<% board.id %>">
-          <%= image_tag board.board_image.url, class: 'board-img' %>
+          <%= image_tag board.board_image.url, class: 'board-img object-fit' %>
         </div>
       <% end %>
 
