@@ -1,21 +1,23 @@
 <div class="like-board-index-page">
   <%= render 'shared/navbar' %>
   <div class="container-fluid">
-
-  <div class="row mt-3">
-    <% @like_boards.each do |board| %>
-      <div class="col-sm-3">
-        <div class="card board-box">
-          <%= image_tag board.board_image.url, class: 'image-fluid' %>
-          <div class="icon-like">
-            <i class="far fa-star fa-2x"></i>
-            <%= liked_count_of(board) %>
+  
+    <div class="js-masonry-container">
+      <div class="js-masonry-sizer col-6 col-sm-4 col-lg-3"></div>
+      <div class="row mt-3">
+        <% @like_boards.each do |board| %>
+          <div class="js-masonry-item col-6 col-sm-4 col-lg-3">
+            <div class="card board-box mb-3">
+              <%= image_tag board.board_image.url, class: 'rounded' %>
+              <div class="icon-star">
+                <i class="far fa-star fa-2x"></i>
+                <%= liked_count_of(board) %>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-
+    </div> <!-- .js-masonry-container -->
     <p class="text-center mt-3">画像は以上です</p>
   </div>
 </div>
