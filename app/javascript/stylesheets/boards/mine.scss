@@ -1,35 +1,18 @@
-.my-board-index-page {
-  margin: auto 0;
-  height: 120%;
-  background-color: #343a40;
-}
-
-.trash-icon {
-  color: #4682b4;
-}
-
-.my-board {
-  width: 340px;
-  height: 340px;
-}
-
 .my-board-box {
   position: relative;
 }
-  
-.trash-box {
+
+.my-icon-star {
   position: absolute;
   top: 85%;
-  left: 55%;
+  left: 5%;
+  padding: 0 5px;
 }
 
-.no-board {
-  letter-spacing: 0.12em;
-}
-
-.object-fit {
-  background-color: gray;
-  width: 340px; height: 340px;
-  object-fit: contain;
+.my-icon-trash {
+  position: absolute;
+  top: 85%;
+  left: 80%;
+  padding: 0 5px;
 }
 
