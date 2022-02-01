@@ -92,6 +92,9 @@ if(location.pathname == '/boards') {
       let moveOutWidth = document.body.clientWidth * 2;
 
       let card = cards[0];
+      let board_id = card.id;
+
+      postReaction(board_id, reaction);
       card.classList.add('removed');
 
       if (reaction == "like") {
