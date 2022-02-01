@@ -2,27 +2,31 @@
   <%= render "shared/navbar" %>
   <div class="container-fluid">
 
-    <div class="row mt-3">
-      <% @boards.each do |board| %>
-        <div class="col-sm-3" id="<% board.id %>">
-          <div class="card my-board-box mb-3">
-            <%= image_tag board.board_image.url, class: 'image-fluid' %>
-            
-            <div class="my-icon-star">
-              <i class="far fa-star fa-2x"></i>
-              <%= liked_count_of(board) %>
-            </div> 
-            
-            <div class="my-icon-trash">
-              <%= link_to board_path(board), method: :delete, data: { confirm: "画像を削除しますか？" } do %>
-                <i class="far fa-trash-alt fa-2x trash-icon"></i>
-              <% end %>
+    <div class="js-masonry-container">
+
+      <div class="js-masonry-sizer col-6 col-sm-4 col-lg-3"></div>
+
+      <div class="row mt-3">
+        <% @boards.each do |board| %>
+          <div class="js-masonry-item col-6 col-sm-4 col-lg-3" id="<% board.id %>">
+            <div class="card mb-3 my-board-box">
+              <%= image_tag board.board_image.url, class: 'image-fluid' %>
+              
+              <div class="my-icon-star">
+                <i class="far fa-star fa-2x"></i>
+                <%= liked_count_of(board) %>
+              </div> 
+              
+              <div class="my-icon-trash">
+                <%= link_to board_path(board), method: :delete, data: { confirm: "画像を削除しますか？" } do %>
+                  <i class="far fa-trash-alt fa-2x trash-icon"></i>
+                <% end %>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  
+        <% end %>
+      </div>
+    </div> <!-- .grid-index -->
+  </div> 
     <div class="">画像は以上です</div>
 </div>
