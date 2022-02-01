@@ -1,5 +1,11 @@
 class User < ApplicationRecord
   has_many :boards, dependent: :destroy
+  has_many :reactions, dependent: :destroy
+  has_many :react_boards, through: :reactions, source: :board
+
+  def favorite_boards
+    reactions.where(status: 'like')
+  end
 
   class << self
     def find_or_create_from_auth_hash(auth_hash)

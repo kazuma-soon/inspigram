@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   skip_before_action :check_logged_in, only: :index
 
   def index
-    @boards = Board.all.order(created_at: :asc)
+    @boards = Board.where.not(user_id: current_user.id)
   end
 
   def mine
