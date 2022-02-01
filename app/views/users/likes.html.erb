@@ -1,0 +1,12 @@
+<div class="like-board-index-page">
+  <%= render 'shared/navbar' %>
+
+  <% @like_boards.each do |board| %>
+    <%= image_tag board.board_image.url %>
+    <i class="far fa-star fa-2x"></i>
+    <%= liked_count_of(board) %>
+  <% end %>
+
+  <p>画像は以上です</p>
+
+</div>
