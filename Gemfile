@@ -40,6 +40,9 @@ gem "mini_magick"
 # Translated into Japanese
 gem "rails-i18n"
 
+# 投稿画像サイズの制限
+gem 'file_validators'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
