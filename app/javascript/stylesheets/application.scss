@@ -2,7 +2,7 @@
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 
 @import "shared/navbar";
-@import "shared/background_100_gray";
+@import "shared/body"; //固定したnavbarにbody上部が隠れるのを防ぐ
 
 @import "top";
 @import "boards/index";
