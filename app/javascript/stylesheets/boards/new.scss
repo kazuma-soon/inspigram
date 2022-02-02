@@ -1,18 +1,9 @@
 .board-new-page{
   margin: auto 0;
-  background-color: #343a40;
   height: 100%;
 }
 
 .new-object-fit {
-  background-color: #343a40;
   width: 340px; height: 340px;
   object-fit: contain;
-}
-
-@media (min-width: 415px) {
-  .board-new-page {
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    margin: 8px auto;
-  }
 }
