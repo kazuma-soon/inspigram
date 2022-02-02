@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :react_boards, through: :reactions, source: :board
 
   def favorite_boards
-    reactions.where(status: 'like')
+    reactions.where(status: 'like').order(updated_at: :desc)
   end
 
   class << self
