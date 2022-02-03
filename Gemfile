@@ -50,6 +50,7 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'faker'
   gem 'factory_bot_rails', '~> 5.2.0'
   gem 'capybara'
   gem 'webdrivers'

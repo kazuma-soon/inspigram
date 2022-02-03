@@ -14,11 +14,10 @@
         <%= link_to 'Top', root_path, class: 'nav-link', 'data-turbolinks': false %>
       </li>
 
-      <li class="navbar-item">
-        <%= link_to 'Collection', boards_path, class: 'nav-link', 'data-turbolinks': false %>
-      </li>
-
       <% if current_user %>
+        <li class="navbar-item">
+          <%= link_to 'Collection', boards_path, class: 'nav-link', 'data-turbolinks': false %>
+        </li>
         <li class="nav-item">
           <%= link_to 'Create', new_board_path, class: 'nav-link', 'data-turbolinks': false %>
         </li>
