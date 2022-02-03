@@ -1,11 +1,6 @@
 class BoardsController < ApplicationController
-
   def index
-    if current_user
-      @boards = Board.where.not(user_id: current_user.id).order(created_at: :desc)
-    else
-      @boards = Board.all
-    end
+    @boards =  Board.where.not(user_id: current_user.id).order(created_at: :desc)
   end
 
   def mine

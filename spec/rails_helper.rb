@@ -63,6 +63,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryBot::Syntax::Methods
 
-  # omniauthのログインテスト
+  # omniauth認証をテストで使用可能にする
   config.include OmniAuthHelpers
+
+  # テスト環境のwindowサイズを任意に指定
+  config.include ResizeWindowSupport
 end
