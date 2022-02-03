@@ -28,6 +28,8 @@
 /javascript/images
 /public/uploads
 
+/tmp/screenshots
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 

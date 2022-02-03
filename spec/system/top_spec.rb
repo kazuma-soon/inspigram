@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Top', type: :system do
+  before { ensure_browser_size }
+
   describe 'ログイン前' do
     before do
       visit root_path
@@ -52,9 +54,7 @@ RSpec.describe 'Top', type: :system do
 
   describe 'ログイン後' do
     before do
-      visit root_path
       login
-      ensure_browser_size
     end
 
     it 'Googleログインのボタンが表示されていない' do
