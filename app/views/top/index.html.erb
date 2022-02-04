@@ -1,12 +1,21 @@
 <div class="top-page">
-
 <%= render 'shared/navbar' %>
 
   <div class="container-fluid">
-    <div class="top-title">
-      <h1 class="text-black text-center">
-        Inspigram
-      </h1>
+    <div class="top-content">
+    
+      <div class="top-title">
+        <h1 class="text-black text-center">
+          Inspigram
+        </h1>
+      </div>
+  
+      <div class="slider">
+        <% @boards.each do |board| %>
+          <p><%= image_tag board.board_image.url, class: 'slider-item' %></p>
+        <% end %>
+      </div>
+
     </div>
     
     <div class="top-authentication text-center">
@@ -21,3 +30,5 @@
     </div>
   </div>
 </div>
+
+<!-- スライドショー：slick -->
