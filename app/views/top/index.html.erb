@@ -12,13 +12,13 @@
   
       <div class="slider">
         <% @boards.each do |board| %>
-          <p><%= image_tag board.board_image.url, class: 'slider-item' %></p>
+          <p><%= image_tag board.board_image.url, class: 'slider-item rounded' %></p>
         <% end %>
       </div>
 
     </div>
     
-    <div class="top-authentication text-center">
+    <div class="top-authentication text-center mt-3">
       <% if current_user.nil? %>
         <div class="top-authentication__sign-in-btn m-3">
           <%= link_to "Start with Google", "/auth/google_oauth2", method: :post, class: "btn text-white" %>
