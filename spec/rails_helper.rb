@@ -73,4 +73,6 @@ RSpec.configure do |config|
   config.include ImageUploadSupport
 
   config.include LogoutSupport
+
+  config.include LikeDislikeSupport
 end
