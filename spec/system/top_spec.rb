@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Top', type: :system do
+  before { ensure_browser_size }
+
   describe 'ログイン前' do
     before do
       visit root_path
@@ -40,7 +42,7 @@ RSpec.describe 'Top', type: :system do
     end
 
     it 'navbar - Googleログインボタン押下で成功し、フラッシュメッセージ表示' do
-      login
+      login('user')
       expect(current_path).to eq boards_path
       expect(page).to have_content('ログインしました！')
     end
@@ -52,9 +54,7 @@ RSpec.describe 'Top', type: :system do
 
   describe 'ログイン後' do
     before do
-      visit root_path
-      login
-      ensure_browser_size
+      login('user')
     end
 
     it 'Googleログインのボタンが表示されていない' do
