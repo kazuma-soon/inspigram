@@ -7,7 +7,7 @@ $(window).on('load resize', function(){
         slidesToShow: 3,
         arrows: false,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 1500,
         speed: 700,
       });
     });
@@ -16,7 +16,7 @@ $(window).on('load resize', function(){
     $(document).ready(function(){
       $('.slider').slick({
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 1500,
         speed: 700,
       });
     });
