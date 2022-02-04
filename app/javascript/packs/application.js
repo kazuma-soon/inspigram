@@ -17,7 +17,8 @@ require('jquery')
 
 require("src/board_image_preview");
 require("src/swipe");
-require("src/masonry")
+require("src/masonry");
+require("src/slider");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
