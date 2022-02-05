@@ -1,5 +1,5 @@
 <div class="top-page">
-<%= render 'shared/navbar' %>
+  <%= render 'shared/navbar' %>
 
   <div class="container-fluid">
     <div class="top-content">
@@ -43,7 +43,7 @@
     
     <div class="top-authentication text-center mt-3">
       <% if current_user.nil? %>
-        <div class="top-authentication__sign-in-btn m-3">
+        <div class="top-authentication__sign-in-btn mt-3">
           <%= link_to "Start with Google", "/auth/google_oauth2", method: :post, class: "btn text-white" %>
         </div>
         <!-- div class="top-authentication__sign-in-guest m-3" -->
@@ -53,5 +53,3 @@
     </div>
   </div>
 </div>
-
-<!-- スライドショー：slick -->

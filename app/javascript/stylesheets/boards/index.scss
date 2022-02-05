@@ -45,7 +45,7 @@
     display: inline-block;
     width: 90vw;
     max-width: 340px;
-    background: #FFFFFF;
+    background: #000;
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
@@ -64,7 +64,7 @@
     text-align: center;
     padding-top: 0px;
     button {
-      border-radius: 50%;
+      border-radius: 10%;
       line-height: 60px;
       width: 60px;
       border: 0;
@@ -102,7 +102,7 @@
 }
 
 .fa-times {
-  color: #CDD6DD;
+  color: #3498DB;
 }
 
 @media (min-width: 414px) {
