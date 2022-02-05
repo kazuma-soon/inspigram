@@ -27,7 +27,7 @@ RSpec.describe 'Boards', type: :system do
     before { visit new_board_path }
 
     it '未入力で投稿すると、エラー・フラッシュが表示される' do
-      click_button('投稿する')
+      click_button('Create')
       expect(page).to have_content('画像を入力してください')
     end
 
