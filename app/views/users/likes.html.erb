@@ -10,7 +10,7 @@
             <div class="card board-box mb-3">
               <%= image_tag board.board_image.url, class: 'rounded' %>
               <div class="icon-star">
-                <i class="far fa-star fa-2x"></i>
+                <i class="fas fa-star fa-2x"></i>
                 <%= liked_count_of(board) %>
               </div>
             </div>
@@ -18,6 +18,6 @@
         <% end %>
       </div>
     </div> <!-- .js-masonry-container -->
-    <p class="text-center mt-3">画像は以上です</p>
+    <p class="text-center mt-3 likes-no-board">No more content</p>
   </div>
 </div>
