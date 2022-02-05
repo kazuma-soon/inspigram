@@ -1,5 +1,6 @@
+<% content_for(:title, 'Top') %>
 <div class="top-page">
-<%= render 'shared/navbar' %>
+  <%= render 'shared/navbar' %>
 
   <div class="container-fluid">
     <div class="top-content">
@@ -8,6 +9,29 @@
         <h1 class="text-black text-center">
           Inspigram
         </h1>
+      </div>
+
+      <div class="mt-3 hot-list-box">
+
+        <div class="fire">
+          <div class="fire-left">
+            <div class="main-fire"></div>
+            <div class="particle-fire"></div>
+          </div>
+          <div class="fire-main">
+            <div class="main-fire"></div>
+            <div class="particle-fire"></div>
+          </div>
+          <div class="fire-right">
+            <div class="main-fire"></div>
+            <div class="particle-fire"></div>
+          </div>
+          <div class="fire-bottom">
+            <div class="main-fire"></div>
+          </div>
+        </div>
+
+        <div class="hot-list text-center">Hot List</div>
       </div>
   
       <div class="slider">
@@ -20,7 +44,7 @@
     
     <div class="top-authentication text-center mt-3">
       <% if current_user.nil? %>
-        <div class="top-authentication__sign-in-btn m-3">
+        <div class="top-authentication__sign-in-btn mt-3">
           <%= link_to "Start with Google", "/auth/google_oauth2", method: :post, class: "btn text-white" %>
         </div>
         <!-- div class="top-authentication__sign-in-guest m-3" -->
@@ -30,5 +54,3 @@
     </div>
   </div>
 </div>
-
-<!-- スライドショー：slick -->

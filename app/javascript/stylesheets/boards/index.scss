@@ -34,6 +34,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      letter-spacing: 1.2px;
+      font-size: 1.2em;
       &.is-active {
         display: flex;
       }
@@ -43,7 +45,7 @@
     display: inline-block;
     width: 90vw;
     max-width: 340px;
-    background: #FFFFFF;
+    background: #000;
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
@@ -52,12 +54,6 @@
     cursor: -webkit-grab;
     cursor: -moz-grab;
     cursor: grab;
-    p {
-      margin-top: 24px;
-      font-size: 20px;
-      padding: 0 16px;
-      pointer-events: none;
-    }
     img {	
       max-width: 100%;	
       pointer-events: none;	
@@ -66,9 +62,9 @@
   &--buttons {
     flex: 0 0 100px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 0px;
     button {
-      border-radius: 50%;
+      border-radius: 10%;
       line-height: 60px;
       width: 60px;
       border: 0;
@@ -106,7 +102,7 @@
 }
 
 .fa-times {
-  color: #CDD6DD;
+  color: #3498DB;
 }
 
 @media (min-width: 414px) {
