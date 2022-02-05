@@ -52,12 +52,6 @@
     cursor: -webkit-grab;
     cursor: -moz-grab;
     cursor: grab;
-    p {
-      margin-top: 24px;
-      font-size: 20px;
-      padding: 0 16px;
-      pointer-events: none;
-    }
     img {	
       max-width: 100%;	
       pointer-events: none;	
@@ -66,7 +60,7 @@
   &--buttons {
     flex: 0 0 100px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 0px;
     button {
       border-radius: 50%;
       line-height: 60px;
