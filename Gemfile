@@ -43,6 +43,9 @@ gem "rails-i18n"
 # 投稿画像サイズの制限
 gem 'file_validators'
 
+# 静的ページの設置
+gem 'high_voltage'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

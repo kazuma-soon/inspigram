@@ -135,6 +135,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
+    high_voltage (3.1.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -347,6 +348,7 @@ DEPENDENCIES
   factory_bot_rails (~> 5.2.0)
   faker
   file_validators
+  high_voltage
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mini_magick
