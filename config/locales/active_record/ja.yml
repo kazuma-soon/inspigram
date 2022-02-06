@@ -3,6 +3,11 @@ ja:
     models:
       user: 'ユーザー'
       board: '画像'
+      contact: 'お問い合わせ'
     attributes:
       board:
         board_image: '画像'
+      contact:
+        name: '名前'
+        email: 'メールアドレス'
+        content: '内容'
