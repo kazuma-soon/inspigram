@@ -17,4 +17,8 @@ Rails.application.routes.draw do
     end
   end
   resources :reactions, only: %i[create]
+
+  resource :contacts, only: [:new, :create] do
+    get "/thanks" => "contacts#thanks"
+  end
 end
