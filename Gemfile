@@ -46,6 +46,10 @@ gem 'file_validators'
 # 静的ページの設置
 gem 'high_voltage'
 
+# 管理機能の作成
+gem 'rails_admin', ['>= 3.0.0.rc', '< 4']
+gem 'cancancan'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

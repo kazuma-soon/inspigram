@@ -11,6 +11,7 @@
     "hammerjs": "^2.0.8",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
+    "rails_admin": "3.0.0-rc",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
