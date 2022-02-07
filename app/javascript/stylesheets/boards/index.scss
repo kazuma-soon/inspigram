@@ -45,7 +45,7 @@
     display: inline-block;
     width: 90vw;
     max-width: 340px;
-    background: #000;
+    background: #fff;
     border-radius: 8px;
     overflow: hidden;
     position: absolute;
@@ -60,6 +60,7 @@
     }
   }
   &--buttons {
+    z-index: 100;
     flex: 0 0 100px;
     text-align: center;
     padding-top: 0px;

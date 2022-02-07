@@ -1,5 +1,7 @@
 RailsAdmin.config do |config|
   config.asset_source = :webpacker
+  config.parent_controller = 'ApplicationController' 
+  config.current_user_method(&:current_user)
 
   ### Popular gems integration
 
@@ -10,7 +12,7 @@ RailsAdmin.config do |config|
   # config.current_user_method(&:current_user)
 
   ## == CancanCan ==
-  # config.authorize_with :cancancan
+  config.authorize_with :cancancan
 
   ## == Pundit ==
   # config.authorize_with :pundit
