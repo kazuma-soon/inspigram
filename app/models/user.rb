@@ -3,6 +3,8 @@ class User < ApplicationRecord
   has_many :reactions, dependent: :destroy
   has_many :react_boards, through: :reactions, source: :board
 
+  enum role: { general: 0, admin: 1 }
+
   def favorite_boards
     reactions.where(status: 'like').order(updated_at: :desc)
   end

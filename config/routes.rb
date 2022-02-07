@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'top#index' 
 
   get 'auth/:provider/callback', to: 'sessions#create'
