@@ -11,7 +11,7 @@
         <% @boards.each do |board| %>
           <div class="js-masonry-item col-6 col-sm-4 col-lg-3" id="<%= board.id %>">
             <div class="card mb-3 my-board-box">
-              <%= image_tag board.board_image.url, class: 'rounded' %>
+              <%= image_tag board.board_image.url, class: 'rounded mine-image' %>
               
               <div class="my-icon-star">
                 <i class="fas fa-star fa-2x"></i>
