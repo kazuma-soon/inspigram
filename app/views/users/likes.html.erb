@@ -4,13 +4,16 @@
   <div class="container-fluid">
   
     <div class="js-masonry-container">
+
       <div class="js-masonry-sizer col-6 col-sm-4 col-lg-3"></div>
+
       <div class="row mt-3">
         <% @like_boards.each do |board| %>
-          <div class="js-masonry-item col-6 col-sm-4 col-lg-3">
-            <div class="card board-box mb-3">
+          <div class="js-masonry-item col-6 col-sm-4 col-lg-3" id="<%= board.id %>">
+            <div class="card mb-3 likes-board-box">
               <%= image_tag board.board_image.url, class: 'rounded likes-image' %>
-              <div class="icon-star">
+
+              <div class="likes-icon-star">
                 <i class="fas fa-star fa-2x"></i>
                 <%= liked_count_of(board) %>
               </div>
@@ -19,6 +22,6 @@
         <% end %>
       </div>
     </div> <!-- .js-masonry-container -->
-    <p class="text-center mt-3 mb-3 likes-no-board">No more content</p>
   </div>
+    <p class="text-center mt-3 mb-3 likes-no-board">No more content</p>
 </div>
