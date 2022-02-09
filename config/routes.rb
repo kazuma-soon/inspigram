@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   resource :contacts, only: [:new, :create] do
     get "/thanks" => "contacts#thanks"
   end
+
+  get "/pages/*id" => 'pages#show', as: :page, format: false
 end
