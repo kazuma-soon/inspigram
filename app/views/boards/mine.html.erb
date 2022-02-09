@@ -12,7 +12,7 @@
           <div class="js-masonry-item col-12 col-sm-4 col-lg-3" id="<%= board.id %>">
             <div class="card mb-3 my-board-box">
               <%= image_tag board.board_image.url, class: 'rounded mine-image' %>
-              
+            </div>
               <div class="my-icon-star">
                 <i class="fas fa-star fa-2x"></i>
                 <%= liked_count_of(board) %>
@@ -23,7 +23,7 @@
                   <i class="fas fa-trash fa-2x trash-icon"></i>
                 <% end %>
               </div>
-            </div>
+          
           </div>
         <% end %>
       </div>
