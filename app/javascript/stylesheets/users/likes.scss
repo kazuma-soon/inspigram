@@ -1,8 +1,13 @@
-.board-box {
+.likes-board-box {
   position: relative;
 }
 
-.icon-star {
+.likes-image {
+  width: 100%;
+  height: auto;
+}
+
+.likes-icon-star {
   position: absolute;
   top: 80%;
   left: 5%;
