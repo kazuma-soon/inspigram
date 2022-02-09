@@ -6,6 +6,7 @@ $(function(){
     $container.masonry({
         itemSelector: '.js-masonry-item',
         columnWidth: '.js-masonry-sizer',
+        percentPosition: true
     });
   });
 });
