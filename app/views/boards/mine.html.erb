@@ -13,8 +13,6 @@
             <div class="card mb-3 my-board-box">
               <%= image_tag board.board_image.url, class: 'rounded mine-image' %>
               
-              <div class="card-body">
-
               <div class="my-icon-star">
                 <i class="fas fa-star fa-2x"></i>
                 <%= liked_count_of(board) %>
@@ -24,9 +22,6 @@
                 <%= link_to board_path(board), method: :delete, data: { confirm: "画像を削除しますか？" } do %>
                   <i class="fas fa-trash fa-2x trash-icon"></i>
                 <% end %>
-
-              </div>
-
               </div>
             </div>
           </div>
