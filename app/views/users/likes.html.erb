@@ -9,7 +9,7 @@
         <% @like_boards.each do |board| %>
           <div class="js-masonry-item col-6 col-sm-4 col-lg-3">
             <div class="card board-box mb-3">
-              <%= image_tag board.board_image.url, class: 'rounded' %>
+              <%= image_tag board.board_image.url, class: 'rounded likes-image' %>
               <div class="icon-star">
                 <i class="fas fa-star fa-2x"></i>
                 <%= liked_count_of(board) %>
