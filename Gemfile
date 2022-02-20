@@ -37,6 +37,8 @@ gem 'dotenv-rails'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 
+gem 'fog-aws'
+
 # Translated into Japanese
 gem "rails-i18n"
 
