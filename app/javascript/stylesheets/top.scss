@@ -4,6 +4,21 @@
   font: italic small-caps bold 16px/2 cursive;
 }
 
+.introduction-for-guest {
+  letter-spacing: 1.2px;
+  line-height: 32px;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  p {
+    margin-top: 40px;
+  }
+}
+
+
 .top-authentication {
   position: absolute;
   top: 70%;
@@ -285,4 +300,14 @@
     background-color: transparent;
     margin-right: 0;
   } 
+}
+
+
+.index-for-guest {
+  background: #1ABC9C;
+  border-radius: 10px;
+  padding: 4px;
+  white-space: nowrap;
+  padding: 10px 20px;
+  letter-spacing: 1.2px;
 }
