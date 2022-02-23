@@ -52,6 +52,9 @@ gem 'high_voltage'
 gem 'rails_admin', ['>= 3.0.0.rc', '< 4']
 gem 'cancancan'
 
+# OGP
+gem 'meta-tags'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
