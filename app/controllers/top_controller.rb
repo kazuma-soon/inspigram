@@ -7,6 +7,6 @@ class TopController < ApplicationController
   end
 
   def guest_index
-    @all_boards = Board.all
+    @all_boards = Board.all.order(created_at: :desc)
   end
 end
