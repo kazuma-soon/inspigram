@@ -1,45 +1,80 @@
+
+
 .top-title {
   letter-spacing: 2px;
   white-space: nowrap;
   font: italic small-caps bold 16px/2 cursive;
 }
 
-.introduction-for-guest {
-  letter-spacing: 1.2px;
-  line-height: 32px;
+/* -- LP introduction -- */
+.lp {
+  max-width: 400px;
+  margin: 0 auto;
+}
 
-  h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+.lp-catch-copy {
+  margin-top: 60px;
+}
+
+.lp-app-title {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   
+  padding: 10px;
+
   p {
+    margin-top: 10px;
+  }
+}
+
+.lp-authentication {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  div {
+    background-color: #DD5144;
+    width: 50%;
+    margin: auto;
+  }
+}
+
+/* -- LP howto -- */
+.lp-howto {
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  img {
+    width: 40%;
+  }
+  p {
+    width: 40%;
+    padding: 20px;
+
+    font-size: 0.5rem;
+  }
+
+  .lp-howto-login {
+    margin-top: 40px;
+  }
+  .lp-howto-swipe {
+    margin-top: 40px;
+  }
+  .lp-howto-check {
+    margin-top: 40px;
+  }
+  .lp-howto-create {
+    margin-top: 40px;
+  }
+  .lp-howto-ranking {
     margin-top: 40px;
   }
 }
 
 
-.top-authentication {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  &__sign-in-btn {
-    background: #1ABC9C;
-    border-radius: 10px;
-    padding: 4px;
-    white-space: nowrap; 
-  }
-  //&__sign-in-guest {
-  //  border-radius: 30px;
-  //  padding: 4px;
-  //  white-space: nowrap;
-  //  border-style: solid;
-  //  border-color: #fff;
-  //  border-width: 2px;
-  //}
-}
-
+/* -- Hot List -- */
 .hot-list-box {
   position: relative
 }

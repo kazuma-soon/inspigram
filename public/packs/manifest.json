@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs/js/application-fa9e28bc48bf551217ba.js",
-  "application.js.map": "/packs/js/application-fa9e28bc48bf551217ba.js.map",
+  "application.js": "/packs/js/application-80e9d7cc5838c4f1b7a1.js",
+  "application.js.map": "/packs/js/application-80e9d7cc5838c4f1b7a1.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-fa9e28bc48bf551217ba.js"
+        "/packs/js/application-80e9d7cc5838c4f1b7a1.js"
       ],
       "js.map": [
-        "/packs/js/application-fa9e28bc48bf551217ba.js.map"
+        "/packs/js/application-80e9d7cc5838c4f1b7a1.js.map"
       ]
     },
     "rails_admin": {
@@ -19,6 +19,11 @@
       ]
     }
   },
+  "media/images/lp-create.png": "/packs/media/images/lp-create-01b6c35fc556b7c5ab847dc2b7eb2896.png",
+  "media/images/lp-like.png": "/packs/media/images/lp-like-cb549a21409be63b35e3388b7304dd0d.png",
+  "media/images/lp-login.png": "/packs/media/images/lp-login-1a3421c703898947cd52741a60ff3e44.png",
+  "media/images/lp-ranking.jpg": "/packs/media/images/lp-ranking-094fc3cf0d7329863e0cd4b065bd5514.jpg",
+  "media/images/lp-swipe.png": "/packs/media/images/lp-swipe-11435b61e51db834ceb253f1893d1e66.png",
   "media/images/preview_default.png": "/packs/media/images/preview_default-9e24c8a432fd421e98dfb31dc4d77cd5.png",
   "media/images/sample.jpg": "/packs/media/images/sample-fc5710d0b6760c0ecc342851a7c795c6.jpg",
   "media/images/sample_swipe.jpg": "/packs/media/images/sample_swipe-cc1aa6b2e659fdc65637c17115b19c4a.jpg",
