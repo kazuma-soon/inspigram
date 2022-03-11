@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   end
 
   get "/pages/*id" => 'pages#show', as: :page, format: false
+
+  get '/top/guest', to: 'top#guest_index'
 end

@@ -37,6 +37,8 @@ gem 'dotenv-rails'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 
+gem 'fog-aws'
+
 # Translated into Japanese
 gem "rails-i18n"
 
@@ -49,6 +51,9 @@ gem 'high_voltage'
 # 管理機能の作成
 gem 'rails_admin', ['>= 3.0.0.rc', '< 4']
 gem 'cancancan'
+
+# OGP
+gem 'meta-tags'
 
 
 group :development, :test do

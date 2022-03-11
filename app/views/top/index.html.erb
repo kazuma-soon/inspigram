@@ -5,52 +5,120 @@
 
   <div class="container-fluid">
     <div class="top-content">
-    
-      <div class="top-title">
-        <h1 class="text-black text-center">
-          Inspigram
-        </h1>
-      </div>
 
-      <div class="mt-3 hot-list-box">
+      <% if current_user.nil? %> <!-- 未ログイン向けLP -->
+        <div class="lp">
+          <div class="lp-app-introduction text-center">
+            <p class="lp-catch-copy">まだまだ好きに絵を描きたいから</p>
+            <div class="lp-app-title">
+              <h2>Inspigram</h2>
+              <p>絵のアイデア発見アプリ<p>
+            </div>
+            <div class="lp-authentication">
+              <p>\ 絵のアイデアを探してみよう /<p>
+              <div>
+                <%= link_to "/auth/google_oauth2", method: :post, class: "btn text-white" do %>
+                  Google認証ではじめる
+                <% end %>
+              </div>
+            </div>
+          </div>
 
-        <div class="fire">
-          <div class="fire-left">
-            <div class="main-fire"></div>
-            <div class="particle-fire"></div>
+          <div class="lp-howto text-center">
+            <h2>Inspigramの使い方<h2>
+
+            <div class="lp-howto-login">
+              <h3>1.Google認証で簡単にログイン<h3>
+              <div class="lp-box d-flex">
+                <%= image_pack_tag 'media/images/lp-login.png' %>
+                <p>上のボタンから簡単にログインしましょう</p>
+              </div>
+            </div>
+
+            <div class="lp-howto-swipe">
+              <h3>2.スワイプで直感的に絵を選ぼう<h3>
+              <div class="lp-box d-flex">
+                <%= image_pack_tag 'media/images/lp-swipe.png' %>
+                <p>スワイプして好きな絵を選びましょう</p>
+              </div>
+            </div>
+
+            <div class="lp-howto-check">
+              <h3>3.お気に入り一覧をチェックしよう<h3>
+              <div class="lp-box d-flex">
+                <%= image_pack_tag 'media/images/lp-like.png' %>
+                <p>選んだ絵を一覧でみましょう。どんなアイデアがありますか？</p>
+              </div>
+            </div>
+
+            <h2>こんな機能もあります<h2>
+
+            <div class="lp-howto-create">
+              <h3>自分の絵を投稿してみよう<h3>
+              <div class="lp-box d-flex">
+                <%= image_pack_tag 'media/images/lp-create.png' %>
+                <p>自分の絵でアイデアを届けよう</p>
+              </div>
+            </div>
+
+            <div class="lp-howto-ranking">
+              <h3>人気の絵を見てみよう<h3>
+              <div class="lp-box d-flex">
+                <%= image_pack_tag 'media/images/lp-ranking.jpg' %>
+                <p>みんなが選んだ絵を一覧できます</p>
+              </div>
+            <div>
+
           </div>
-          <div class="fire-main">
-            <div class="main-fire"></div>
-            <div class="particle-fire"></div>
-          </div>
-          <div class="fire-right">
-            <div class="main-fire"></div>
-            <div class="particle-fire"></div>
-          </div>
-          <div class="fire-bottom">
-            <div class="main-fire"></div>
-          </div>
+            
+          
+          
+          <!-- p class="guest-intro">スワイプで好きな絵を直感的に集められます。<br>
+                      あなたの絵でインスピレーションを届けることもできます。<br>
+                      さあ、始めましょう。<br>
+                      それとも
+                      <%= link_to top_guest_path, class: 'guest-index-link', 'data-turbolinks': false do %>
+                        <button type="button" class="btn btn-info guest-index-button">一覧</button>
+                      <% end %>
+                      でみんなの絵を見てみる？
+          </p -->
+        </div>
+      <% else %> <!-- LP -->
+      
+        <div class="top-title">
+          <h1 class="text-black text-center">
+            Inspigram
+          </h1>
         </div>
 
-        <div class="hot-list text-center">Hot List</div>
-      </div>
+        <div class="mt-3 hot-list-box">
+
+          <div class="fire">
+            <div class="fire-left">
+              <div class="main-fire"></div>
+              <div class="particle-fire"></div>
+            </div>
+            <div class="fire-main">
+              <div class="main-fire"></div>
+              <div class="particle-fire"></div>
+            </div>
+            <div class="fire-right">
+              <div class="main-fire"></div>
+              <div class="particle-fire"></div>
+            </div>
+            <div class="fire-bottom">
+              <div class="main-fire"></div>
+            </div>
+          </div>
+
+          <div class="hot-list text-center">Hot List</div>
+        </div>
   
-      <div class="slider">
-        <% @boards.each do |board| %>
-          <p><%= image_tag board.board_image.url, class: 'slider-item rounded' %></p>
-        <% end %>
-      </div>
-
-    </div>
-    
-    <div class="top-authentication text-center mt-3">
-      <% if current_user.nil? %>
-        <div class="top-authentication__sign-in-btn mt-3">
-          <%= link_to "Start with Google", "/auth/google_oauth2", method: :post, class: "btn text-white" %>
+        <div class="slider">
+          <% @boards.each do |board| %>
+            <p><%= image_tag board.board_image.url, class: 'slider-item rounded' %></p>
+          <% end %>
         </div>
-        <!-- div class="top-authentication__sign-in-guest m-3" -->
-          <!-- %= link_to "ゲストとして開始", "#", class: "btn text-white bg-dark" % -->
-        <!-- /div -->
 
       <% end %>
     </div>
