@@ -19,9 +19,7 @@ Rails.application.routes.draw do
   end
   resources :reactions, only: %i[create]
 
-  resource :contacts, only: [:new, :create] do
-    get "/thanks" => "contacts#thanks"
-  end
+  resource :contacts, only: [:new]
 
   get "/pages/*id" => 'pages#show', as: :page, format: false
 
