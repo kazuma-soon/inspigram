@@ -44,6 +44,10 @@ https://inspigram.herokuapp.com/
   </tbody>
 </table>
 
+![swipeReadme](https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif)
+
+https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif
+
 ## 使用技術
 ### バックエンド
 - Ruby (3.0.2)
