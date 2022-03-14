@@ -39,9 +39,9 @@ https://inspigram.herokuapp.com/
 
   <tbody>
     <tr>
-      <th>![swipeReadme](https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif)</th>
-      <th>![likeReadme](https://user-images.githubusercontent.com/88179125/158211354-7b213161-4e55-4459-829a-d100f85a6e5e.gif)</th>
-      <th>![rankingReadme](https://user-images.githubusercontent.com/88179125/158212112-b9edb6b4-2c10-49d5-9532-0a3b21b08020.gif)</th>
+      <td>![swipeReadme](https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif)</td>
+      <td>![likeReadme](https://user-images.githubusercontent.com/88179125/158211354-7b213161-4e55-4459-829a-d100f85a6e5e.gif)</td>
+      <td>![rankingReadme](https://user-images.githubusercontent.com/88179125/158212112-b9edb6b4-2c10-49d5-9532-0a3b21b08020.gif)</td>
     </tr>
   </tbody>
 </table>
