@@ -28,23 +28,9 @@ https://inspigram.herokuapp.com/
 
 ## 機能紹介
 
-<table>
-  <thead>
-    <tr>
-      <th>スワイプ選択</th>
-      <th>ライク一覧</th>
-      <th>ランキング</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        ![swipeReadme](https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif)
-      </td>
-    </tr>
-  </tbody>
-</table>
+|スワイプ選択|ライク一覧|ランキング
+|---|---|---|
+|![swipeReadme](https://user-images.githubusercontent.com/88179125/158217869-6978b2b8-d1b6-4ecb-84b1-1c60a9f57b6c.gif)|![likeReadme](https://user-images.githubusercontent.com/88179125/158218030-a4fca582-215d-457a-8951-9a36673bbf8f.gif)|![rankingReadme](https://user-images.githubusercontent.com/88179125/158218150-05bbca06-7453-43e2-b114-4ad3fdbfac0b.gif)|
 
 ## 使用技術
 ### バックエンド
