@@ -54,7 +54,6 @@ https://inspigram.herokuapp.com/
 
 #### 画像
 - carrierwave
-- file_validators
 - fog-aws - 画像をS3に保存する
 
 ## インフラ
