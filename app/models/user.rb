@@ -1,13 +1,13 @@
 class User < ApplicationRecord
   has_many :boards, dependent: :destroy
   has_many :reactions, dependent: :destroy
-  has_many :react_boards, through: :reactions, source: :board
+
+  # statusがlikeのreactionレコードを取得
+  has_many :like_reactions, -> { likes }, class_name: 'Reaction'
+  # そのボードを取得
+  has_many :like_boards, through: :like_reactions, source: :board
 
   enum role: { general: 0, admin: 1 }
-
-  def favorite_boards
-    reactions.where(status: 'like').order(updated_at: :desc)
-  end
 
   class << self
     def find_or_create_from_auth_hash(auth_hash)

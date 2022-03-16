@@ -31,7 +31,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Login with Google
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
-gem 'dotenv-rails' 
 
 # Upload images
 gem 'carrierwave', '~> 2.0'
@@ -41,9 +40,6 @@ gem 'fog-aws'
 
 # Translated into Japanese
 gem "rails-i18n"
-
-# 投稿画像サイズの制限
-gem 'file_validators'
 
 # 静的ページの設置
 gem 'high_voltage'
