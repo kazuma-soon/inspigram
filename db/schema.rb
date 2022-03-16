@@ -23,14 +23,6 @@ ActiveRecord::Schema.define(version: 2022_02_07_124220) do
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
-  create_table "contacts", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email", null: false
-    t.text "content", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "reactions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "board_id", null: false
