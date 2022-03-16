@@ -43,7 +43,7 @@ class BoardImageUploader < CarrierWave::Uploader::Base
   end
 
   def size_range
-    1..20.megabytes
+    0..20.megabytes
   end
 
   # Override the filename of the uploaded files:

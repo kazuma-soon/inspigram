@@ -42,9 +42,6 @@ gem 'fog-aws'
 # Translated into Japanese
 gem "rails-i18n"
 
-# 投稿画像サイズの制限
-gem 'file_validators'
-
 # 静的ページの設置
 gem 'high_voltage'
 
