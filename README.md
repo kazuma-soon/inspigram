@@ -63,8 +63,7 @@ https://inspigram.herokuapp.com/
 - PostgreSQL
 
 ## ER図
-<img width="790" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158202893-ef290169-c375-48bb-a89c-c6e9a1b50968.png">
-
+<img width="796" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158578398-bca0b950-0426-48d5-a3d3-7c7d8f7250bd.png">
 
 
 
