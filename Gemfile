@@ -31,7 +31,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Login with Google
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
-gem 'dotenv-rails' 
 
 # Upload images
 gem 'carrierwave', '~> 2.0'
