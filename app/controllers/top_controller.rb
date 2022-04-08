@@ -3,7 +3,7 @@ class TopController < ApplicationController
 
   def index
     # 人気ランキングの取得
-    @boards = Board.find(Reaction.where(status: 'like').group(:board_id).order('count(board_id) desc').limit(6).pluck(:board_id))
+    @boards = Board.popular_boards
   end
 
   def guest_index
