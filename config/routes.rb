@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :boards, only: %i[index new create destroy] do
     collection do
       get 'mine'
+      get 'draw'
     end
   end
   resources :reactions, only: %i[create]
