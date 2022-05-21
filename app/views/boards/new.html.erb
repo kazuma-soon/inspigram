@@ -20,6 +20,10 @@
           <%= f.submit 'Create', class: 'btn btn-info create-button' %>
         </div>
       <% end %>
+
+      <%= link_to draw_boards_path, class: 'mt-3 d-block text-center' do %>
+        <button type="button" class="btn btn-success create-button">絵を描いて投稿できます！</button>
+      <% end %>
   
     </div>
   </div>
