@@ -17,6 +17,8 @@ require('jquery')
 
 require("src/board_image_preview");
 require("src/swipe");
+require("src/draw");
+require("src/create");
 require("src/masonry");
 require("src/slider");
 

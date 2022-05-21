@@ -1,0 +1,25 @@
+<% content_for(:title, 'Draw') %>
+<div class="draw-page">
+  <%= render "shared/navbar" %>
+  <div class="cantainer">
+    <div class="row">
+
+      <div class="mt-3 mx-auto">
+        <canvas id="draw-area" class="drawPicture" width="400px" height="400px" style="border: 1px solid #000000;"></canvas>
+        <!-- 色を選択できるカラーパレットを用意する。 -->
+        <span id="color-palette"></span>
+      </div>
+      <div class="mt-3">
+        <button id="clear-button">全消し</button>
+      </div>
+      <div class="mt-3">
+        <button id="eraser-button">消しゴムモード</button>
+      </div>
+
+      <div class="mt-3 draw-upload">
+        <button id= "js-pictureUpload">アップロード</button>
+      </div>
+
+    </div>
+  </div>
+</div>
