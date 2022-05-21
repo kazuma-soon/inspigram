@@ -51,8 +51,7 @@ window.addEventListener('load', () => {
     // 消しゴムモードを選択したときの挙動
     const eraserButton = document.querySelector('#eraser-button');
     eraserButton.addEventListener('click', () => {
-      // 消しゴムと同等の機能を実装したい場合は現在選択している線の色を
-      // 白(#FFFFFF)に変更するだけでよい
+      // 白(#FFFFFF)に変更で消しゴムを実装
       currentColor = '#FFFFFF';
     });
 
