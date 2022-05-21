@@ -1,13 +1,13 @@
 {
-  "application.js": "/packs/js/application-aa9676e5da7c82085164.js",
-  "application.js.map": "/packs/js/application-aa9676e5da7c82085164.js.map",
+  "application.js": "/packs/js/application-f4be30fff067212297cf.js",
+  "application.js.map": "/packs/js/application-f4be30fff067212297cf.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-aa9676e5da7c82085164.js"
+        "/packs/js/application-f4be30fff067212297cf.js"
       ],
       "js.map": [
-        "/packs/js/application-aa9676e5da7c82085164.js.map"
+        "/packs/js/application-f4be30fff067212297cf.js.map"
       ]
     },
     "rails_admin": {
