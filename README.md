@@ -27,24 +27,23 @@ https://inspigram.herokuapp.com/
 4. 絵の投稿
 
 ## 機能紹介
+### メイン機能
+- スワイプ自動ライク機能で、直感的に気に入った絵を選べます。
+- 選んだ絵を一覧でチェックできます。
+- トップページでは、人気ある絵がスライド形式で表示されます。
 
-<table>
-  <thead>
-    <tr>
-      <th>スワイプ選択</th>
-      <th>ライク一覧</th>
-      <th>ランキング</th>
-    </tr>
-  </thead>
+|スワイプ選択|ライク一覧|ランキング
+|---|---|---|
+|![swipeReadme](https://user-images.githubusercontent.com/88179125/158217869-6978b2b8-d1b6-4ecb-84b1-1c60a9f57b6c.gif)|![likeReadme](https://user-images.githubusercontent.com/88179125/158218030-a4fca582-215d-457a-8951-9a36673bbf8f.gif)|![rankingReadme](https://user-images.githubusercontent.com/88179125/158218150-05bbca06-7453-43e2-b114-4ad3fdbfac0b.gif)|
 
-  <tbody>
-    <tr>
-      <th>![swipeReadme](https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif)</th>
-      <th>![likeReadme](https://user-images.githubusercontent.com/88179125/158211354-7b213161-4e55-4459-829a-d100f85a6e5e.gif)</th>
-      <th>![rankingReadme](https://user-images.githubusercontent.com/88179125/158212112-b9edb6b4-2c10-49d5-9532-0a3b21b08020.gif)</th>
-    </tr>
-  </tbody>
-</table>
+### お絵描き機能βの追加
+- 投稿画面で絵を描いて、そのまま投稿できます。
+
+![draw](https://user-images.githubusercontent.com/88179125/169653071-b72706d7-d745-4d56-ace6-8ca66470c05e.gif)
+
+「絵を写真で撮って投稿するの、ちょっと面倒かも、、、」という意見をいただき、  
+「投稿画面で絵を描いてそのまま投稿できる」ようにしてみました！  
+描画をJSにて受け取り、そのままコントローラーへと処理を飛ばしています。  
 
 ## 使用技術
 ### バックエンド
@@ -68,7 +67,6 @@ https://inspigram.herokuapp.com/
 
 #### 画像
 - carrierwave
-- file_validators
 - fog-aws - 画像をS3に保存する
 
 ## インフラ
@@ -77,11 +75,51 @@ https://inspigram.herokuapp.com/
 - PostgreSQL
 
 ## ER図
-<img width="790" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158202893-ef290169-c375-48bb-a89c-c6e9a1b50968.png">
+変更予定（下記）
 
-https://qiita.com/MandoNarin/items/c4e310e2501a5dd58268
+<img width="649" alt="inspigram_er_3" src="https://user-images.githubusercontent.com/88179125/169684376-f8c7cb42-ee31-4608-a138-4574f8d9fa5b.png">
+
+## 追記
+### ゲスト機能追加構想
+「ログインするよりも前に試したい」というユーザーさんも多いかな？ と考え、  
+ゲスト用のスワイプ機能・一覧機能実装を予定しています。  
+具体的には、リクエスト送信者のグローバルIPアドレスを用いて、ライクレコードを作成する機能を考えています。  
+`ERD`は以下への変更を予定しています。  
+
+<img width="773" alt="inspigram_er_2" src="https://user-images.githubusercontent.com/88179125/169679903-04adc437-4ab3-4fa8-a876-5b522c3e33ad.png">
+
+_______________________________________________
+
+## 技術へのこだわり
+
+### なぜオムニアースを使ったの？
+- ログインの入力は面倒臭い！！！これだけで初見の快適なユーザー体験が滅びる！！！
+- `twitter`のログインも実装したい。
+
+### Hammer.jsの採用理由は？
+- スワイプは「絶対にスマホで利用して欲しい」ため、スマホ操作に強みを持つ当ライブラリを採用しました。
+- 「スワイプ自動ライク機能あります！スマホ非対応です」← 泣ける。
+
+### 画像表示でこだわったことは？
+- たくさんの画像を一度に見れる、`masonry.js`を使用しました。
+- 当アプリは「直感的にアイデアを獲得する」もの。一度にたくさんの絵を視界に入れることで、直感を刺激したいと思ったためです！
+
+### Railsの使用にあたっての工夫は？
+- **NOT Fat Controller!!!**の精神です。可読性が悪化しない場合は、可能な限り`model`, `helper`に処理を記載しました！
+- （コードが綺麗になっていくのは快感でしたので、やりました、、。）
+- `JavaScript` はすごく煩雑です、、！改善！
+
+### 画像処理に関して何か工夫はある？
+- 画像は`AWS S3`に保存するようにしました！
+- `AWS`を触りたかった、、。新しいものだったのでつい、、。
+
+### Reactionテーブルでenumのstatusカラムを設けた理由
+`enum status: { like: 0, dislike: 1 }`のことですね。
+「`dislike`のカラムでレコードつくらず、削除しないの？」ってことに対する回答です！
+
+- 今後の方針で「過去にリアクションした画像を閲覧する機能」をつけようと考えています。そのため、レコードとして保持しております！
 
 
-
-
-
+### なぜ少し古いjQueryを？
+- コード量が当時学んでいた`Vue.js`よりスッキリするのかな？と思って`jQuery`を採用しました。また、メンテナンスや改修がしやすいかなと！
+  しかし、それは失敗でした、、! お世辞にもメンテしやすいとは言えません、、。次同じことするなら、`Vue.js`, `React.js`で考えます。
