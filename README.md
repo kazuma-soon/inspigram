@@ -79,6 +79,8 @@ https://inspigram.herokuapp.com/
 ## ER図
 <img width="790" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158202893-ef290169-c375-48bb-a89c-c6e9a1b50968.png">
 
+https://qiita.com/MandoNarin/items/c4e310e2501a5dd58268
+
 
 
 
