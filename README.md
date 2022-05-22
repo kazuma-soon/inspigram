@@ -27,10 +27,21 @@ https://inspigram.herokuapp.com/
 4. 絵の投稿
 
 ## 機能紹介
+### メイン機能
+- スワイプ自動ライク機能で、直感的に気に入った絵を選べます。
+- 選んだ絵を一覧でチェックできます。
+- トップページでは、人気ある絵がスライド形式で表示されます。
 
 |スワイプ選択|ライク一覧|ランキング
 |---|---|---|
 |![swipeReadme](https://user-images.githubusercontent.com/88179125/158217869-6978b2b8-d1b6-4ecb-84b1-1c60a9f57b6c.gif)|![likeReadme](https://user-images.githubusercontent.com/88179125/158218030-a4fca582-215d-457a-8951-9a36673bbf8f.gif)|![rankingReadme](https://user-images.githubusercontent.com/88179125/158218150-05bbca06-7453-43e2-b114-4ad3fdbfac0b.gif)|
+
+### お絵描き機能βの追加
+「絵を写真で撮って投稿するの、ちょっと面倒かも、、、」という意見をいただき、「投稿画面で絵を描いてそのまま投稿できる」ようにしてみました！
+描画をJSにて受け取り、そのままコントローラーへと処理を飛ばしています。
+
+![draw](https://user-images.githubusercontent.com/88179125/169653071-b72706d7-d745-4d56-ace6-8ca66470c05e.gif)
+
 
 ## 使用技術
 ### バックエンド
@@ -62,11 +73,6 @@ https://inspigram.herokuapp.com/
 - PostgreSQL
 
 ## 追記
-### お絵描き機能βの追加
-「絵を写真で撮って投稿するの、ちょっと面倒かも、、、」という意見をいただき、「投稿画面で絵を描いてそのまま投稿できる」ようにしてみました！
-
-![draw](https://user-images.githubusercontent.com/88179125/169653071-b72706d7-d745-4d56-ace6-8ca66470c05e.gif)
-
 ### ゲスト機能追加構想
 「ログインするよりも前に試したい」というユーザーさんも多いかな？ と考え、ゲスト用のスワイプ機能・一覧機能実装を予定しています。
 具体的には、リクエスト送信者のグローバルIPアドレスを用いて、ライクレコードを作成する機能を考えています。
