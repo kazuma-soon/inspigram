@@ -77,7 +77,7 @@ https://inspigram.herokuapp.com/
 ## ER図
 変更予定（下記）
 
-<img width="790" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158202893-ef290169-c375-48bb-a89c-c6e9a1b50968.png">
+<img width="649" alt="inspigram_er_3" src="https://user-images.githubusercontent.com/88179125/169684376-f8c7cb42-ee31-4608-a138-4574f8d9fa5b.png">
 
 ## 追記
 ### ゲスト機能追加構想
