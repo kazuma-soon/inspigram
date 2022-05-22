@@ -28,23 +28,9 @@ https://inspigram.herokuapp.com/
 
 ## 機能紹介
 
-<table>
-  <thead>
-    <tr>
-      <th>スワイプ選択</th>
-      <th>ライク一覧</th>
-      <th>ランキング</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <th>![swipeReadme](https://user-images.githubusercontent.com/88179125/158209646-624012e5-8968-493f-aeb0-149d147ec090.gif)</th>
-      <th>![likeReadme](https://user-images.githubusercontent.com/88179125/158211354-7b213161-4e55-4459-829a-d100f85a6e5e.gif)</th>
-      <th>![rankingReadme](https://user-images.githubusercontent.com/88179125/158212112-b9edb6b4-2c10-49d5-9532-0a3b21b08020.gif)</th>
-    </tr>
-  </tbody>
-</table>
+|スワイプ選択|ライク一覧|ランキング
+|---|---|---|
+|![swipeReadme](https://user-images.githubusercontent.com/88179125/158217869-6978b2b8-d1b6-4ecb-84b1-1c60a9f57b6c.gif)|![likeReadme](https://user-images.githubusercontent.com/88179125/158218030-a4fca582-215d-457a-8951-9a36673bbf8f.gif)|![rankingReadme](https://user-images.githubusercontent.com/88179125/158218150-05bbca06-7453-43e2-b114-4ad3fdbfac0b.gif)|
 
 ## 使用技術
 ### バックエンド
@@ -68,7 +54,6 @@ https://inspigram.herokuapp.com/
 
 #### 画像
 - carrierwave
-- file_validators
 - fog-aws - 画像をS3に保存する
 
 ## インフラ
@@ -76,12 +61,15 @@ https://inspigram.herokuapp.com/
 - Amazon S3
 - PostgreSQL
 
-## ER図
-<img width="790" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158202893-ef290169-c375-48bb-a89c-c6e9a1b50968.png">
+## 追記
+### お絵描き機能βの追加
+「絵を写真で撮って投稿するの、ちょっと面倒かも、、、」という意見をいただき、「投稿画面で絵を描いてそのまま投稿できる」ようにしてみました！
 
-https://qiita.com/MandoNarin/items/c4e310e2501a5dd58268
+![draw](https://user-images.githubusercontent.com/88179125/169653071-b72706d7-d745-4d56-ace6-8ca66470c05e.gif)
 
+### ゲスト機能追加構想
+「ログインするよりも前に試したい」というユーザーさんも多いかな？ と考え、ゲスト用のスワイプ機能・一覧機能実装を予定しています。
+具体的には、リクエスト送信者のグローバルIPアドレスを用いて、ライクレコードを作成する機能を考えています。
+`ERD`は以下への変更を予定しています。
 
-
-
-
+<img width="773" alt="inspigram_er_2" src="https://user-images.githubusercontent.com/88179125/169679903-04adc437-4ab3-4fa8-a876-5b522c3e33ad.png">
