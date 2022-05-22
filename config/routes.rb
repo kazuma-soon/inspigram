@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     collection do
       get 'mine'
       get 'draw'
+      get 'guest_index'
     end
   end
   resources :reactions, only: %i[create]
