@@ -29,7 +29,7 @@
 
 .lp-authentication {
   margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 5px;
 
   div {
     background-color: #DD5144;
@@ -38,8 +38,19 @@
   }
 }
 
+.guest-btn {
+  margin-top: 10px;
+  margin-bottom: 60px; 
+
+  background-color: #1ABC9C;
+  width: 50%;
+  margin: auto;
+}
+
 /* -- LP howto -- */
 .lp-howto {
+  margin-top: 60px;
+  
   h2 {
     font-size: 1.5rem;
   }

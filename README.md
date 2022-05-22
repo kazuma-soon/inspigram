@@ -61,9 +61,6 @@ https://inspigram.herokuapp.com/
 - Amazon S3
 - PostgreSQL
 
-## ER図
-<img width="773" alt="inspigram-er" src="https://user-images.githubusercontent.com/88179125/158674163-5ee22d6f-f8b2-4ab4-9732-0dd8e243dd1f.png">
-
 ## 追記
 ### お絵描き機能βの追加
 「絵を写真で撮って投稿するの、ちょっと面倒かも、、、」という意見をいただき、「投稿画面で絵を描いてそのまま投稿できる」ようにしてみました！

@@ -6,7 +6,8 @@ class TopController < ApplicationController
     @boards = Board.popular_boards
   end
 
-  def guest_index
-    @all_boards = Board.all.order(created_at: :desc)
-  end
+  # boards#guest_indexへ移行
+  # def guest_index
+  #   @all_boards = Board.all.order(created_at: :desc)
+  # end
 end

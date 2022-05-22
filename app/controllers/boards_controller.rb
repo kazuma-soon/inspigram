@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  skip_before_action :check_logged_in, only: %i[guest_index]
+  
   def index
     @boards = Board.where.not(user_id: current_user.id).order(created_at: :desc)
   end
@@ -29,6 +31,10 @@ class BoardsController < ApplicationController
     @board = current_user.boards.find(params[:id])
     @board.destroy!
     redirect_to mine_boards_path, success: '画像を削除しました！'
+  end
+
+  def guest_index
+    @all_boards = Board.all.order(created_at: :desc)
   end
 
   private
