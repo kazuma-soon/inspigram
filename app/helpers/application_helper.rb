@@ -9,7 +9,7 @@ module ApplicationHelper
     page_title.empty? ? base_title : page_title + ' | ' + base_title
   end
 
-  # OGP
+  # meta-tags / OGP
   def default_meta_tags
     {
       reverse: true,
