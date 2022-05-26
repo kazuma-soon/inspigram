@@ -45,4 +45,4 @@ yarn-debug.log*
 /config/credentials/development.key
 
 .DS_Store
-README.md
+
