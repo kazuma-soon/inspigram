@@ -34,7 +34,7 @@ gem 'omniauth-rails_csrf_protection'
 
 # Upload images
 gem 'carrierwave', '~> 2.0'
-gem "mini_magick"
+# gem "mini_magick"
 
 gem 'fog-aws'
 

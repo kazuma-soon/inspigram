@@ -7,7 +7,7 @@ class Ability
     return unless user && user&.admin? # 管理者じゃなかったらこのメソッドを抜ける
 
     can :access, :rails_admin # 管理者画面のアクセス許可
-    can :manage, :all         # 管理権限許可
+    can :manage, :all         # 管理権限許可 (管理画面での削除、編集、更新など)
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

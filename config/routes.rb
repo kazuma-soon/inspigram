@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   resource :contacts, only: [:new]
 
-  get "/pages/*id" => 'pages#show', as: :page, format: false
+  get "/pages/*id" => 'pages#show', as: :page
 
   get '/top/guest', to: 'top#guest_index'
 end

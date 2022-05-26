@@ -12,6 +12,8 @@ class User < ApplicationRecord
   class << self
     def find_or_create_from_auth_hash(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
+      # findできなかったらブロック実行
+      # update は create / update を切り替えてくれる
       find_or_create_by(email: user_params[:email]) do |user|
         user.update(user_params)
       end

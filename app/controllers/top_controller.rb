@@ -2,7 +2,7 @@ class TopController < ApplicationController
   skip_before_action :check_logged_in, only: %i[index guest_index]
 
   def index
-    # 人気ランキングの取得
+    # popular_boards -> model/boards.rb
     @boards = Board.popular_boards
   end
 
