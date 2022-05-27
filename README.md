@@ -119,3 +119,7 @@ issueとして、まとめております。
 - [こだわったつもりが失敗。jQueryを採用した理由](https://github.com/kazuma-soon/inspigram/issues/78#issue-1250685241)
 - [前いいねした画像が見つけられない問題](https://github.com/kazuma-soon/inspigram/issues/79#issue-1250692259)
 - [未ログインユーザーの利用ハードルを下げたい](https://github.com/kazuma-soon/inspigram/issues/74#issue-1246412733)
+
+### 実装方法などをアウトプットしています
+- [【Rails】slickでスライドショーを作成する](https://zenn.dev/kazuma_soon/articles/882d9452b797f6)
+- [【Rails】S3 × CarrierWave × fog-aws で画像アップロード](https://zenn.dev/kazuma_soon/articles/62f50c68eb011e)
